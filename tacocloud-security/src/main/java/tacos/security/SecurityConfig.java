@@ -49,10 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
       .and()
         .csrf()
-          .ignoringAntMatchers("/h2-console/**", "/api/**")
-
-      // Allow pages to be loaded in frames from the same origin; needed for H2-Console
-      .and()
+            .disable()
         .headers()
           .frameOptions()
             .sameOrigin()
