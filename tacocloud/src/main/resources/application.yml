@@ -27,6 +27,13 @@ spring:
 #logging:
 #  level:
 #    root: DEBUG
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+
 ---
 spring:
   profiles: prod
