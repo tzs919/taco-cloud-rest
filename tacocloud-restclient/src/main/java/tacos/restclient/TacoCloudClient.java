@@ -135,9 +135,9 @@ public class TacoCloudClient {
   // DELETE examples
   //
 
-  public void deleteIngredient(String id) {
+  public void deleteIngredient(Ingredient ingredient) {
     rest.delete("http://tacocloud:8080/data-api/ingredients/{id}",
-        id);
+        ingredient.getId());
   }
 
   //
